@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="https://github.com/RafaelGoulartB/Proffy/blob/master/.github/logo.png?raw=true" alt="Proffy Logo"/>
-</p>
-
-<p align="center">
 <img src="https://img.shields.io/npm/v/angular?color=purple&label=Angular&logo=Angular&logoColor=red&style=for-the-badge">
 </p>
 
