@@ -12,6 +12,7 @@ Repository used for Web Development Classes
 
 * NodeJS
 * Yarn or NPM
+* Angular CLI
 
 <p align="center"> Made with love by <a href="https://github.com/Eryk-Luiz">Lucas Alves</a> 🚀</p>
 
