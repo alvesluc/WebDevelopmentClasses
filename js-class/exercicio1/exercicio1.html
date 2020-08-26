@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - 25.08.2020</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <h2>Exercício 1 - 25.08.2020</h2>
+
+    <h3>
+        Crie um arquivo na linguagem que você é mais fluente que represente o
+        JSON professor.
+    </h3>
+    <pre>
+        <code>
+            {
+                "name":"Fujioka",
+                "age":"26",
+                "teaches":[
+                   "Java",
+                   "HTML",
+                   "JavaScript",
+                   "Spring",
+                   "Angular",
+                   "Node",
+                   "Quarkus"
+                ]
+             }
+        </code>
+    </pre>
+
+    <h3>
+        Crie uma classe que Transforme o Objeto em Json e Leia um Json e
+        transforma no objeto que represente o JSON Professor informado na seção
+        anterior.
+    </h3>
+    <p id="fujiokaToJson"></p>
+    
+    <script>
+        const teacherFujioka = {
+            name: "Fujioka",
+            age: "26",
+            teaches: [
+                "Java",
+                "HTML",
+                "JavaScript",
+                "Spring",
+                "Angular",
+                "Node",
+                "Quarkus"
+            ],
+        };
+
+        var fujiokaToJson = JSON.stringify(teacherFujioka);
+        document.getElementById("fujiokaToJson").innerHTML = fujiokaToJson;
+
+    </script>
+
+</body>
+
+</html>
