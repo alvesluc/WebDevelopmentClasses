@@ -5,7 +5,15 @@
 body {
     background-color: var(--color-background);
     font-family: 'Roboto', sans-serif;
+    padding: 20px 80px;
 }
+
+body .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
 code {
     font-family: 'Roboto', sans-serif;
 }
