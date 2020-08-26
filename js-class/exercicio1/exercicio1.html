@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 1 - 25.08.2020</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
 
@@ -40,7 +41,10 @@
         transforma no objeto que represente o JSON Professor informado na seção
         anterior.
     </h3>
+    
     <p id="fujiokaToJson"></p>
+    <p id="jsonToFujioka"></p>
+    <p id="jsonToFujiokaTeaches"></p>
 
     <script>
         const teacherFujioka = {
@@ -59,6 +63,15 @@
 
         var fujiokaToJson = JSON.stringify(teacherFujioka);
         document.getElementById("fujiokaToJson").innerHTML = fujiokaToJson;
+
+        var jsonToFujiokaString = '{"name": "Fujioka","age": "26","teaches": ["Java","HTML","JavaScript","Spring","Angular","Node","Quarkus"]}';
+
+        var jsonToFujioka = JSON.parse(jsonToFujiokaString);
+        document.getElementById("jsonToFujioka").innerHTML = jsonToFujioka.name + ", " + jsonToFujioka.age;
+        
+        var subjectsString = jsonToFujioka.teaches.toString();
+        var subjects = subjectsString.replace(/,/g, ', ');
+        document.getElementById("jsonToFujiokaTeaches").innerHTML = subjects;
 
     </script>
 
