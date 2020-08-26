@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="fujiclass"></p>
+    <script>
+
+        function showDate() {
+            document.getElementById("fujiclass").innerHTML = new Date();
+            console.log(new Date())
+        }
+
+        //setInterval(showDate, 1000);
+        function showDateEverySecond() {
+            setInterval(showDate, 1000);
+        }
+        //setTimeout(showDate, 1000);
+        function showDateEveryFiveSeconds() {
+            setTimeout(showDate, 5000);
+        }
+
+        showDateEverySecond();
+        // showDateEveryFiveSeconds();
+
+    </script>
+
+</body>
+
+</html>
