@@ -5,7 +5,8 @@
 body {
     background-color: var(--color-background);
     font-family: 'Montserrat', sans-serif;
-    padding: 20px 80px;
+    padding: 0 5vw 0 5vw;
+    margin-top: 20px;
 }
 
 body .title {
