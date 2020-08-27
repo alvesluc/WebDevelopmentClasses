@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1 class="title">Exercício 2 - 25.08.2020</h1>
+
+  <h2>Mapeie quais entidades são representadas no JSON</h2>
+
+  <table>
+    <h3 class="table-head">Squads</h3>
+    <hr class="solid">
+    <tr>
+      <th>Squad Name</th>
+      <th>Home Town</th>
+      <th>Formed</th>
+      <th>Secret Base</th>
+      <th>Active</th>
+      <th>Members</th>
+    </tr>
+    <tr>
+      <td>Super Hero Squad</td>
+      <td>Metro City</td>
+      <td>2016</td>
+      <td>Super Tower</td>
+      <td>true</td>
+      <td>
+        Molecule Man <br>
+        Mademe Uppercut <br>
+        Eternal Flame
+      </td>
+    </tr>
+  </table>
+  <hr class="solid">
+
+  <table>
+    <h3 class="table-head">Heroes</h3>
+    <hr class="solid">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Secret Identity</th>
+      <th>Powers</th>
+    </tr>
+    <tr>
+      <td>Molecule Man</td>
+      <td>29</td>
+      <td>Dan Jukes</td>
+      <td>Radiation resistance,
+        Turning tiny,
+        Radiation blast</td>
+    </tr>
+    <tr>
+      <td>Madame Uppercut</td>
+      <td>39</td>
+      <td>Jane Wilson</td>
+      <td>Million tonne punch
+        Damage resistance
+        Superhuman reflexes</td>
+    </tr>
+    <tr>
+      <td>Eternal Flame/td>
+      <td>1000000</td>
+      <td>Unknown</td>
+      <td>Immortality,
+        Heat Immunity,
+        Inferno,
+        Teleportation,
+        Interdimensional Travel</td>
+    </tr>
+  </table>
+  <hr class="solid">
+
+  <h2>Mapeie uma classe PHP ou JS para o JSON da Figura.</h2>
+
+  <pre>
+    <code id="jsonSquad"></code>
+  </pre>
+  <p id="jsonMoleculeMan"></p>
+  <p id="jsonMadameUppercut"></p>
+  <p id="jsonEternalFlame"></p>
+
+  <script>
+
+    const moleculeMan = {
+      name: "Molecule Man",
+      age: 29,
+      secretIdentity: "Dan Jukes",
+      powers: [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast",
+      ]
+    };
+
+    const madameUppercut = {
+      name: "Madame Uppercut",
+      age: 39,
+      secretIdentity: "Jane Wilson",
+      powers: [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    };
+
+    const eternalFlame = {
+      name: "Eternal Flame",
+      age: 1000000,
+      secretIdentity: "Unknown",
+      powers: [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional Travel"
+      ]
+    };
+
+    const squad = {
+      "squadName": "Super hero squad",
+      "homeTown": "Metro City",
+      "formed": 2016,
+      "secretBase": "Super tower",
+      "active": true,
+      "members": [
+        moleculeMan,
+        madameUppercut,
+        eternalFlame
+      ]
+    };
+
+    var squadToJson = JSON.stringify(squad, undefined, 4);
+    document.getElementById("jsonSquad").innerHTML = squadToJson;
+
+  </script>
+
+</body>
+
+</html>
