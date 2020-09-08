@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
   <title>Exercício 2 - 25.08.2020</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -89,61 +89,7 @@
   <p id="jsonMadameUppercut"></p>
   <p id="jsonEternalFlame"></p>
 
-  <script>
-
-    const moleculeMan = {
-      name: "Molecule Man",
-      age: 29,
-      secretIdentity: "Dan Jukes",
-      powers: [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast",
-      ]
-    };
-
-    const madameUppercut = {
-      name: "Madame Uppercut",
-      age: 39,
-      secretIdentity: "Jane Wilson",
-      powers: [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
-    };
-
-    const eternalFlame = {
-      name: "Eternal Flame",
-      age: 1000000,
-      secretIdentity: "Unknown",
-      powers: [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional Travel"
-      ]
-    };
-
-    const squad = {
-      "squadName": "Super hero squad",
-      "homeTown": "Metro City",
-      "formed": 2016,
-      "secretBase": "Super tower",
-      "active": true,
-      "members": [
-        moleculeMan,
-        madameUppercut,
-        eternalFlame
-      ]
-    };
-
-    var squadToJson = JSON.stringify(squad, undefined, 4);
-    document.getElementById("jsonSquad").innerHTML = squadToJson;
-
-  </script>
-
+  <script src="./script.js"></script>
 </body>
 
 </html>
