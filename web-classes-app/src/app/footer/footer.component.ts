@@ -9,6 +9,7 @@ export class FooterComponent implements OnInit {
 
   public headerText = "Like my repo";
   public githubUrl = "https://github.com/alvesluc/WebDevelopmentClasses";
+  
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,9 @@
+<div class="card">
+    <img *ngIf="imageVisible" src="assets/images/img_avatar3.png" alt="Avatar" style="width:100%">
+    <div class="container">
+        <h3>{{ name }}</h3>
+        <p>{{ career }}</p>
+        <button class="btn btn-primary" (click)="showImage()">Show</button> | 
+        <button class="btn btn-danger" (click)="hideImage()">Hide</button>
+    </div>
+</div>
