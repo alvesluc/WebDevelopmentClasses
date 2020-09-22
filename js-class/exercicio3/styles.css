@@ -7,7 +7,13 @@
 
 html{
     font-size: 16px;
-    background-color: #636363;
+}
+
+body {
+    height: 100vh;
+    background: -moz-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+    background: -webkit-linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
+    background: linear-gradient(60deg, #3023ae 0%, #c86dd7 100%);
 }
 
 .calculator{

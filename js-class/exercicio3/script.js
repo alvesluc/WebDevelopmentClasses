@@ -175,6 +175,14 @@ function calculate() {
     updateOutputResult(result_final);
 }
 
+function checkKey(name) {
+    if (name == "clear") {
+        clearData();
+    } else if (name == "delete") {
+        popData();
+    }
+}
+
 function calculator(button) {
     switch (button.type) {
         case "operator":
@@ -184,11 +192,7 @@ function calculator(button) {
             pushData(button);
             break;
         case "key":
-            if (button.name == "clear") {
-                clearData();
-            } else if (button.name == "delete") {
-                popData();
-            }
+            checkKey(button.name);
             break;
         case "calculate":
             calculate();
@@ -216,25 +220,25 @@ function isFloat(number) {
     return number % 1 != 0;
 }
 
-const max_output_number_length = 10;
-const output_precision = 5;
-
 function formatResult(result) {
+    const max_output_number_length = 10;
+    const output_precision = 5;
+
     if (digitCounter(result) > max_output_number_length) {
         if (isFloat(result)) {
             const result_int = parseInt(result);
             const result_int_length = digitCounter(result_int);
 
             if (result_int_length > max_output_number_length) {
-                return result.toPrecision(output_precision);
+                result = result.toPrecision(output_precision);
             } else {
                 const num_digits_after_point = max_output_number_length - result_int_length;
-                return result.toFixed(num_digits_after_point);
+                result = result.toFixed(num_digits_after_point);
             }
         } else {
-            return result.toPrecision(output_precision);
+            result = result.toPrecision(output_precision);
         }
-    } else {
-        return result;
     }
+    return result;
+
 }
